@@ -50,7 +50,7 @@ public class EditorActivity extends AppCompatActivity {
      * Gender of the pet. The possible values are:
      * 0 for unknown gender, 1 for male, 2 for female.
      */
-    private int mGender = PetContract.PetEntry.GENDER_UNKNOW;
+    private int mGender = PetContract.PetsDbEntry.GENDER_UNKNOW;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +88,11 @@ public class EditorActivity extends AppCompatActivity {
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
                     if (selection.equals(getString(R.string.gender_male))) {
-                        mGender = PetContract.PetEntry.GENDRR_MALE; // Male
+                        mGender = PetContract.PetsDbEntry.GENDRR_MALE; // Male
                     } else if (selection.equals(getString(R.string.gender_female))) {
-                        mGender = PetContract.PetEntry.GENDER_FEMALE; // Female
+                        mGender = PetContract.PetsDbEntry.GENDER_FEMALE; // Female
                     } else {
-                        mGender = PetContract.PetEntry.GENDER_UNKNOW; // Unknown
+                        mGender = PetContract.PetsDbEntry.GENDER_UNKNOW; // Unknown
                     }
                 }
             }
@@ -100,7 +100,7 @@ public class EditorActivity extends AppCompatActivity {
             // Because AdapterView is an abstract class, onNothingSelected must be defined
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                mGender = PetContract.PetEntry.GENDER_UNKNOW; // Unknown
+                mGender = PetContract.PetsDbEntry.GENDER_UNKNOW; // Unknown
             }
         });
     }
