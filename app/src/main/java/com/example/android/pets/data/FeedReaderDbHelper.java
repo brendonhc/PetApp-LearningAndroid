@@ -7,14 +7,15 @@ import com.example.android.pets.data.PetContract.PetsDbEntry;
 
 /**
  * Classe que intermedia a comunicação do app com sua base de dados local SQLite
- *
- *
  */
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
 
     /**
-     * Tem que ser modificada a cada atualização da estrutura da base de dados, como,
+     * Versão do arquivo da base de dados
+     * <p>
+     *     Tem que ser modificada a cada atualização da estrutura da base de dados, como,
      * acréscimo/remoção/alteração de uma coluna.
+     * </p>
      */
     private static final int DATABASE_VERSION = 1;
     /**
