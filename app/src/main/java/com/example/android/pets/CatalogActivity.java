@@ -75,8 +75,8 @@ public class CatalogActivity extends AppCompatActivity {
     }
 
     /**
-     * Temporary helper method to display information in the onscreen TextView about the state of
-     * the pets database.
+     * Método auxiliar temporário para mostrar as informações na tela com "TextView" sobre o estado
+     * da base de dados interna do app.
      */
     private void displayDatabaseInfo() {
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
