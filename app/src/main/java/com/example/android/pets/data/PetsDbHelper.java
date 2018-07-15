@@ -3,12 +3,12 @@ package com.example.android.pets.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.example.android.pets.data.PetContract.PetsDbEntry;
+import com.example.android.pets.data.PetsContract.PetsDbEntry;
 
 /**
  * Classe que intermedia a comunicação do app com sua base de dados local SQLite
  */
-public class FeedReaderDbHelper extends SQLiteOpenHelper {
+public class PetsDbHelper extends SQLiteOpenHelper {
 
     /**
      * Versão do arquivo da base de dados
@@ -58,7 +58,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
      * Construtor da base de dados interna do app
      * @param context
      */
-    public FeedReaderDbHelper(Context context) {
+    public PetsDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

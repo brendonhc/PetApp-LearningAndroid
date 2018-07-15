@@ -10,7 +10,7 @@ import android.provider.BaseColumns;
  *  o a codificação e legibilidade do código em sua completude
  *  </p>
  */
-public final class PetContract {
+public final class PetsContract {
 
     /**
      * Constantes para os campos da tabela "pets" da base de dados
