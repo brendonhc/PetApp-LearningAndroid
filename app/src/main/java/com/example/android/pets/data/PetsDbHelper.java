@@ -31,6 +31,7 @@ public class PetsDbHelper extends SQLiteOpenHelper {
 
     /*SEPARADORES*/
     private static final String COMMA_SEP = ",";
+    private static final String SPACE_SEP = " ";
 
     /*KEYWORDS*/
     private static final String PRIMARY_KEY_KW = "PRIMARY KEY";
@@ -41,13 +42,13 @@ public class PetsDbHelper extends SQLiteOpenHelper {
 
     /*SQL's*/
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + PetsDbEntry.TABLE_NAME + " ("
-                    + PetsDbEntry._ID + INTEGER_TYPE + PRIMARY_KEY_KW + AUTOINCREMENT_KW + COMMA_SEP
-                    + PetsDbEntry.COLUMN_PET_NAME + TEXT_TYPE + COMMA_SEP
-                    + PetsDbEntry.COLUMN_PET_BREED + TEXT_TYPE + NOT_NULL_KW + COMMA_SEP
-                    + PetsDbEntry.COLUMN_PET_GENDER + TEXT_TYPE + NOT_NULL_KW + COMMA_SEP
-                    + PetsDbEntry.COLUMN_PET_WEIGHT + INTEGER_TYPE + DEFAULT_KW + " 0" + COMMA_SEP +
-            ")"
+            "CREATE TABLE " + PetsDbEntry.TABLE_NAME + SPACE_SEP + "("
+            + PetsDbEntry._ID + SPACE_SEP + INTEGER_TYPE + SPACE_SEP + PRIMARY_KEY_KW + SPACE_SEP + AUTOINCREMENT_KW + COMMA_SEP
+            + PetsDbEntry.COLUMN_PET_NAME + SPACE_SEP + TEXT_TYPE + COMMA_SEP
+            + PetsDbEntry.COLUMN_PET_BREED + SPACE_SEP + TEXT_TYPE + SPACE_SEP + NOT_NULL_KW + COMMA_SEP
+            + PetsDbEntry.COLUMN_PET_GENDER + SPACE_SEP + TEXT_TYPE + SPACE_SEP + NOT_NULL_KW + COMMA_SEP
+            + PetsDbEntry.COLUMN_PET_WEIGHT + SPACE_SEP + INTEGER_TYPE + SPACE_SEP + DEFAULT_KW + SPACE_SEP + "0"
+            +")"
     ;
 
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + PetsDbEntry.TABLE_NAME;

@@ -15,6 +15,7 @@
  */
 package com.example.android.pets;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -48,6 +49,9 @@ public class CatalogActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Helper method to display db state
+        displayDatabaseInfo();
     }
 
     @Override
@@ -78,6 +82,7 @@ public class CatalogActivity extends AppCompatActivity {
      * Método auxiliar temporário para mostrar as informações na tela com "TextView" sobre o estado
      * da base de dados interna do app.
      */
+    @SuppressLint("SetTextI18n")
     private void displayDatabaseInfo() {
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
         // and pass the context, which is the current activity.
@@ -89,6 +94,8 @@ public class CatalogActivity extends AppCompatActivity {
         // Perform this raw SQL query "SELECT * FROM pets"
         // to get a Cursor that contains all rows from the pets table.
         Cursor cursor = db.rawQuery("SELECT * FROM " + PetsDbEntry.TABLE_NAME, null);
+
+        //noinspection TryFinallyCanBeTryWithResources
         try {
             // Display the number of rows in the Cursor (which reflects the number of rows in the
             // pets table in the database).
